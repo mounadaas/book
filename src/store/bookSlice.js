@@ -6,7 +6,7 @@ export const getBooks = createAsyncThunk('book/getBooks', async(_ , thunkAPI)=>{
     const {rejectWithValue} = thunkAPI;
 
         try{
-            const res = await fetch('http://localhost:3500/book');
+            const res = await fetch('https://glitch.com/edit/#!/quiver-nickel-glider');
             const data = await res.json();
             return data;
         }catch(error){
@@ -17,7 +17,7 @@ export const getBooks = createAsyncThunk('book/getBooks', async(_ , thunkAPI)=>{
 export const inserBooks = createAsyncThunk('book/insertBooks', async(bookData , thunkAPI)=>{
     const {rejectWithValue} = thunkAPI;
     try{
-        const res = await fetch('http://localhost:3500/book',{
+        const res = await fetch('https://glitch.com/edit/#!/quiver-nickel-glider',{
             method:'POST',
             body: JSON.stringify(bookData),
             headers:{

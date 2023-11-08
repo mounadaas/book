@@ -9,7 +9,7 @@ const Bookdetail = ({id}) => {
   const quantity = getItemQuantity(id)
   
   const {bookId} = useParams();
-  const api="http://localhost:3500/book";
+  const api="https://glitch.com/edit/#!/quiver-nickel-glider";
   
   const [book, setbook]= useState({})
   useEffect(()=>{
